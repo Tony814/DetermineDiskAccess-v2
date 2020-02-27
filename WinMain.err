@@ -1,0 +1,2 @@
+WinMain.c(13): Warning! W303: Parameter 'lpCmdLine' has been defined, but not referenced
+WinMain.c(167): Warning! W303: Parameter 'lParam' has been defined, but not referenced

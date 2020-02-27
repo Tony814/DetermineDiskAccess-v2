@@ -1,0 +1,36 @@
+!define BLANK ""
+C:\WATCOM\DDAv2\DDAv2.obj : C:\WATCOM\DDAv2\DDAv2.c .AUTODEPEND
+ @C:
+ cd C:\WATCOM\DDAv2
+ *wcc DDAv2.c -i="C:\WATCOM/h;C:\WATCOM/h/win" -w4 -e25 -zq -od -d2 -zdf -4 &
+-bt=windows -fo=.obj -ml
+
+C:\WATCOM\DDAv2\WinMain.obj : C:\WATCOM\DDAv2\WinMain.c .AUTODEPEND
+ @C:
+ cd C:\WATCOM\DDAv2
+ *wcc WinMain.c -i="C:\WATCOM/h;C:\WATCOM/h/win" -w4 -e25 -zq -od -d2 -zdf -&
+4 -bt=windows -fo=.obj -ml
+
+C:\WATCOM\DDAv2\DDAv2.res : C:\WATCOM\DDAv2\DDAv2.rc .AUTODEPEND
+ @C:
+ cd C:\WATCOM\DDAv2
+ *wrc DDAv2.rc -bt=windows -i="$[:;C:\WATCOM/h;C:\WATCOM/h/win" -q -ad -r -f&
+o=DDAv2.res
+
+C:\WATCOM\DDAv2\DDAv2.exe : C:\WATCOM\DDAv2\DDAv2.obj C:\WATCOM\DDAv2\WinMai&
+n.obj C:\WATCOM\DDAv2\DDAv2.h C:\WATCOM\DDAv2\DDAv2.res .AUTODEPEND
+ @C:
+ cd C:\WATCOM\DDAv2
+ @%write DDAv2.lk1 FIL DDAv2.obj,WinMain.obj
+ @%append DDAv2.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b DDAv2.imp 
+ @%append DDAv2.lk1 LIBR DDAv2.imp
+!endif
+!ifneq BLANK "DDAv2.res"
+ @%append DDAv2.lk1 op resource=DDAv2.res
+!endif
+ *wlink name DDAv2 d all sys windows op m op maxe=25 op q op symf @DDAv2.lk1
+!ifneq BLANK "DDAv2.res"
+!endif
+

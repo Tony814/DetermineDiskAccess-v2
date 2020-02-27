@@ -1,0 +1,211 @@
+Open Watcom Linker Version 2.0 beta Feb 13 2020 00:24:26 (32-bit)
+Copyright (c) 2002-2020 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       20/02/26 22:40:38
+Executable Image: DDAv2.exe
+creating a Windows 16-bit executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:0000            00002330
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+DDAv2_TEXT             CODE           AUTO           0001:0000       00000103
+WinMain_TEXT           CODE           AUTO           0001:0103       00000577
+_TEXT                  CODE           AUTO           0001:067a       000007bf
+FAR_DATA               FAR_DATA       AUTO           0002:0000       00000000
+_NULL                  BEGDATA        DGROUP         0002:0000       00000010
+AFX_NULL               BEGDATA        DGROUP         0002:0010       00000000
+CONST                  DATA           DGROUP         0002:0010       00000188
+CONST2                 DATA           DGROUP         0002:0198       00000006
+_DATA                  DATA           DGROUP         0002:019e       00000106
+XIB                    DATA           DGROUP         0002:02a4       00000000
+XI                     DATA           DGROUP         0002:02a4       00000006
+XIE                    DATA           DGROUP         0002:02aa       00000000
+YIB                    DATA           DGROUP         0002:02aa       00000000
+YI                     DATA           DGROUP         0002:02aa       00000000
+YIE                    DATA           DGROUP         0002:02aa       00000000
+STRINGS                DATA           DGROUP         0002:02aa       00000000
+DATA                   DATA           DGROUP         0002:02aa       00000000
+BCSD                   DATA           DGROUP         0002:02aa       00000000
+_BSS                   BSS            DGROUP         0002:02aa       00000086
+STACK                  STACK          DGROUP         0002:0330       00002000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: DDAv2.obj(C:\WATCOM\DDAv2\DDAv2.c)
+0001:0000      GetDiskAccess_
+Module: WinMain.obj(C:\WATCOM\DDAv2\WinMain.c)
+0001:0103      WINMAIN
+0001:01f7+     RegisterMainWindowClass_
+0001:027a+     CreateMainWindow_
+0001:02d3+     MAINWNDPROC
+0001:0593+     ABOUTDIALOGPROC
+0001:0611+     ShowAboutDialog_
+0002:019e+     _g_hInstance
+0002:032e+     _PageFileResult
+Module: C:\WATCOM\lib286\win\clibl.lib(stk086.asm)
+0001:067f      __STK
+0001:0696*     __STKOVERFLOW_
+Module: C:\WATCOM\lib286\win\clibl.lib(segread.c)
+0001:06b3      segread_
+Module: C:\WATCOM\lib286\win\clibl.lib(intx086.c)
+0001:06dd      int86x_
+0001:0792*     int86_
+Module: C:\WATCOM\lib286\win\clibl.lib(cmodel.asm)
+0001:07c2      _big_code_
+0001:07c2*     CodeModelMismatch
+Module: C:\WATCOM\lib286\win\clibl.lib(wstart)
+0000:0006*     pLocalHeap
+0000:0008*     pAtomTable
+0000:000a*     pStackTop
+0000:000c*     pStackMin
+0000:000e*     pStackBot
+0002:0000*     __nullarea
+0002:01a4*     __curbrk
+0002:01a6*     __psp
+0002:01a8*     __osmajor
+0002:01a9*     __osminor
+0002:01aa*     __osmode
+0002:000a      __STACKLOW
+0002:000c*     __STACKTOP
+0002:01ac*     __cbyte
+0002:01ae*     __child
+0002:01b0*     __no87
+0002:01ab*     __HShift
+0002:01b1*     __get_ovl_stack
+0002:01b5*     __restore_ovl_stack
+0002:01b9*     ___FPE_handler
+0002:01bd*     __LpCmdLine
+0002:01c1*     __LpPgmName
+0001:07c2      _wstart_
+0001:07c2*     _cstart_
+0001:07cd      __exit_
+0001:08e3      __GETDS
+Module: C:\WATCOM\lib286\win\clibl.lib(xmsg.c)
+0001:08e5*     __exit_with_msg_
+0001:093c      __fatal_runtime_error_
+Module: C:\WATCOM\lib286\win\clibl.lib(dointr)
+0001:0956      _DoINTR_
+Module: C:\WATCOM\lib286\win\clibl.lib(dosseg)
+0001:0ccc      __DOSseg__
+Module: C:\WATCOM\lib286\win\clibl.lib(exit.c)
+0001:0ccd+     __null_int23_exit_
+0001:0cce      exit_
+0001:0d03      _exit_
+0002:0256+     ___int23_exit
+0002:025a+     ___FPE_handler_exit
+Module: C:\WATCOM\lib286\win\clibl.lib(initrtns.c)
+0001:0d45*     __FInitRtns
+0001:0d50      __InitRtns
+0001:0daa*     __FFiniRtns
+0001:0db5      __FiniRtns
+Module: C:\WATCOM\lib286\win\clibl.lib(enterdb.c)
+0001:0e15      __EnterWVIDEO_
+0002:025e+     ___WD_Present
+Module: C:\WATCOM\lib286\win\clibl.lib(winrtns.c)
+0002:0260*     __WindowsIsWindowedHandle
+0002:0264*     __WindowsRemoveWindowedHandle
+0002:0268*     __WindowsNewWindow
+0002:026c*     __WindowsCloseWindow
+0002:0270*     __WindowsSetAbout
+0002:0274*     __WindowsSetAppTitle
+0002:0278*     __WindowsSetConTitle
+0002:027c*     __WindowsDestroyOnClose
+0002:0280*     __WindowsYieldControl
+0002:0284*     __WindowsShutDown
+0002:0288*     __WindowsStdin
+0002:028c*     __WindowsStdout
+0002:0290*     __WindowsKbhit
+0002:0294*     __WindowsGetch
+0002:0298*     __WindowsGetche
+0002:029c*     __WindowsPutch
+0002:02a0      __WindowsExitRtn
+Module: C:\WATCOM\lib286\win\clibl.lib(sgdef086)
+0002:02a4      __Start_XI
+0002:02aa      __End_XI
+0002:02aa      __Start_YI
+0002:02aa      __End_YI
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+MESSAGEBOX                          USER
+SHOWWINDOW                          USER
+UPDATEWINDOW                        USER
+SENDMESSAGE                         USER
+GETMESSAGE                          USER
+TRANSLATEMESSAGE                    USER
+DISPATCHMESSAGE                     USER
+LOADICON                            USER
+LOADCURSOR                          USER
+GETSTOCKOBJECT                      GDI
+REGISTERCLASS                       USER
+CREATEWINDOW                        USER
+DESTROYWINDOW                       USER
+DEFWINDOWPROC                       USER
+POSTQUITMESSAGE                     USER
+BEGINPAINT                          USER
+GETDC                               USER
+GETMAPMODE                          GDI
+SETMAPMODE                          GDI
+SELECTOBJECT                        GDI
+TEXTOUT                             GDI
+DRAWICON                            USER
+RELEASEDC                           USER
+ENDPAINT                            USER
+ENDDIALOG                           USER
+MAKEPROCINSTANCE                    KERNEL
+DIALOGBOX                           USER
+FREEPROCINSTANCE                    KERNEL
+INITTASK                            KERNEL
+GETMODULEFILENAME                   KERNEL
+INITAPP                             USER
+WAITEVENT                           KERNEL
+__AHSHIFT                           KERNEL
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+C:\WATCOM\lib286\win\windows.lib
+C:\WATCOM\lib286\win\clibl.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  2000 (8192.)
+Memory size:  3169 (12649.)
+Entry point address: 0001:07c2
+Link time: 00:00.10
